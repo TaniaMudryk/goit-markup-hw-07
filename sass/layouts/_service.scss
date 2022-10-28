@@ -4,9 +4,7 @@
 }
 
 .service-item-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %aligning;
   margin-bottom: 30px;
   width: 270px;
   height: 120px;
@@ -33,10 +31,7 @@
 
 .service-title-list {
   margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include font(700, 14px, 1.14, 0.03em);  
   text-transform: uppercase;
   color: var(--color-titles);
 }
@@ -47,15 +42,10 @@
   letter-spacing: 0.03em;
 }
 
-.services-title,
-.team-title,
-.customers-title {
+.services-title {
   margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
+  @include font(700, 36px, 1.17, 0.03em);  
+  text-align: center;  
   color: var(--color-titles);
 }
 
@@ -74,11 +64,8 @@
 
 .services-over-text {
   position: absolute;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-align: center;
-  letter-spacing: 0.03em;
+  @include font(700, 14px, 1.14, 0.03em);  
+  text-align: center;  
   text-transform: uppercase;
   color: #ffffff;
   width: 370px;

@@ -32,29 +32,22 @@
 }
 
 .footer-title-list {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include font(700, 14px, 1.14, 0.03em);
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 20px;
 }
 
 .footer-soc-list {
-  display: flex;
+  @extend %aligning;
   gap: 10px;
-  align-items: center;
-  justify-content: center;
 }
 
 .footer-soc-link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %aligning;
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 250ms var(--timing-function);
   &:hover,
